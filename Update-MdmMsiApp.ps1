@@ -1,4 +1,14 @@
-﻿
+﻿<#
+This script updates an existing InTune MSI LOB Application.
+
+The following InTune functions were taken from https://github.com/microsoftgraph/powershell-intune-samples:
+    Get-AuthToken
+    Get-InTuneApplication
+    Get-ApplicationsAssignment
+    Get-AADGroup
+    Test-JSON
+#>
+
 ####################FUNCTIONS#######################
 
 function Get-AuthToken {
@@ -256,10 +266,10 @@ This function is used to update an MSI application using the Graph API REST inte
 .DESCRIPTION
 The function connects to the Graph API Interface and updates an MSI package 
 .EXAMPLE
-Add-AndroidApplication -JSON $JSON -IconURL pathtourl
+Update-InTuneApplication -JSON $JSON -appID $appID -IconURL pathtourl
 Adds an Android application into Intune using an icon from a URL
 .NOTES
-NAME: Add-AndroidApplication
+NAME: Update-InTuneApplication
 #>
 
 [cmdletbinding()]
